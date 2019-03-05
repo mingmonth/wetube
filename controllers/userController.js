@@ -5,7 +5,7 @@ export const getJoin = (req, res) => {
 };
 
 export const postJoin = (req, res) => {
-  //console.log(req.body);
+  // console.log(req.body);
   const {
     body: { name, email, password, password2 }
   } = req;

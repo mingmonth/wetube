@@ -8,6 +8,7 @@ import {
   postLogin,
   logout
 } from "../controllers/userController";
+
 const globalRouter = express.Router();
 
 globalRouter.get(routes.join, getJoin);
