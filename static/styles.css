@@ -366,6 +366,8 @@ input[type="submit"] {
   .form-container .fileUpload label {
     font-weight: 300;
     margin-right: 10px; }
+  .form-container .fileUpload input[type="file"] {
+    max-width: 230px; }
 
 .social-login {
   display: -webkit-box;

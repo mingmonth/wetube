@@ -36,5 +36,8 @@
       font-weight: 300;
       margin-right: 10px;
     }
+    input[type="file"] {
+      max-width: 230px;
+    }
   }
 }
