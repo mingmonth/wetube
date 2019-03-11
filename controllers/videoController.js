@@ -55,9 +55,9 @@ export const videoDetail = async (req, res) => {
     params: { id }
   } = req;
   try {
-    if (req.user.id === null) {
+    /* if (req.user.id === null) {
       res.redirect(routes.home);
-    } else {
+    } else */ {
       const video = await Video.findById(id).populate("creator");
       // console.log(video);
       // console.log(req.params);

@@ -126,9 +126,9 @@ export const userDetail = async (req, res) => {
     params: { id }
   } = req;
   try {
-    if (req.user.id === null) {
+    /* if (req.user.id === null) {
       res.redirect(routes.home);
-    } else {
+    } else */ {
       const user = await User.findById(id).populate("videos");
       console.log(user);
       res.render("userDetail", { pageTitle: "User Detail", user });
