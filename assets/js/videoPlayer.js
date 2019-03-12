@@ -27,7 +27,7 @@ function handleVolumeButtonClick() {
 function exitFullScreen() {
   fullScreenButton.innerHTML = '<i class="fas fa-expand"></i>';
   fullScreenButton.addEventListener("click", goFullScreen);
-  document.webkitExitFullScreen();
+  document.webkitExitFullscreen();
 }
 
 function goFullScreen() {
