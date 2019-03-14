@@ -145,13 +145,14 @@ export const postAddComment = async (req, res) => {
     body: { comment },
     user
   } = req;
+
   try {
     const video = await Video.findById(id);
     const newComment = await Comment.create({
       text: comment,
       creator: user.id
     });
-    video.comment.push(newComment.id);
+    video.comments.push(newComment.id);
     video.save();
   } catch (error) {
     res.status(400);

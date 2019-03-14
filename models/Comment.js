@@ -5,9 +5,9 @@ const CommentSchema = new mongoose.Schema({
     type: String,
     required: "Text is required"
   },
-  createAt: {
+  createdAt: {
     type: Date,
-    Default: Date.now
+    default: Date.now
   },
   creator: {
     type: mongoose.Schema.Types.ObjectId,
