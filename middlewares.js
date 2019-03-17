@@ -3,6 +3,10 @@ import multerS3 from "multer-s3";
 import aws from "aws-sdk";
 import routes from "./routes";
 
+aws.config.credentials = new aws.EC2MetadataCredentials({
+  httpOptions: { timeout: 4000 }
+});
+
 const s3 = new aws.S3({
   accessKeyId: process.env.AWS_KEY,
   secretAccessKey: process.env.AWS_PRIVATE_KEY,
