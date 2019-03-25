@@ -4,6 +4,7 @@ import passport from "passport";
 import monogoose from "mongoose";
 import session from "express-session";
 import path from "path";
+import flash from "express-flash";
 import MongoSotre from "connect-mongo";
 import cookieParser from "cookie-parser";
 import express from "express";
@@ -40,6 +41,9 @@ app.use(
     store: new CookieStore({ mongooseConnection: monogoose.connection })
   })
 );
+
+app.use(flash());
+
 app.use(passport.initialize());
 app.use(passport.session());
 
